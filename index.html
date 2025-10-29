@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="FlexInference - Next-generation inference optimization for agentic LLM workflows">
+    <title>FlexInference | Optimizing Agentic AI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">FlexInference</div>
+            <ul class="nav-links">
+                <li><a href="#technology">Technology</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#research">Research</a></li>
+                <li><a href="#contact" class="cta-button">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1 class="hero-title">Supercharge Your Agentic AI Workflows</h1>
+            <p class="hero-subtitle">Next-generation inference optimization for multi-agent LLM systems. Reduce latency, maximize throughput, and unlock the full potential of collaborative AI.</p>
+            <div class="hero-cta">
+                <a href="#contact" class="btn btn-primary">Get Early Access</a>
+                <a href="#technology" class="btn btn-secondary">Learn More</a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <div class="stat-number">3x</div>
+                    <div class="stat-label">Faster Inference</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">60%</div>
+                    <div class="stat-label">Lower Latency</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">2x</div>
+                    <div class="stat-label">Better GPU Utilization</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section class="problem">
+        <div class="container">
+            <h2 class="section-title">The Agentic AI Challenge</h2>
+            <p class="section-subtitle">Modern AI applications are evolving beyond simple chatbots to complex multi-agent workflows, but existing inference engines aren't built for this reality.</p>
+            <div class="problem-grid">
+                <div class="problem-card">
+                    <div class="icon">⏱️</div>
+                    <h3>Load Imbalance</h3>
+                    <p>Models idle while waiting for others, wasting expensive GPU cycles and increasing end-to-end latency.</p>
+                </div>
+                <div class="problem-card">
+                    <div class="icon">🔄</div>
+                    <h3>Cache Isolation</h3>
+                    <p>KV caches can't be shared between generator and verifier models, requiring redundant computation.</p>
+                </div>
+                <div class="problem-card">
+                    <div class="icon">📊</div>
+                    <h3>Suboptimal Scheduling</h3>
+                    <p>Static scheduling policies fail to adapt to the dynamic patterns of agentic workflows.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technology Section -->
+    <section id="technology" class="technology">
+        <div class="container">
+            <h2 class="section-title">Our Solution</h2>
+            <p class="section-subtitle">FlexInference optimizes inference at both the kernel and scheduling levels, purpose-built for agentic workloads.</p>
+            
+            <div class="tech-grid">
+                <div class="tech-card">
+                    <div class="tech-icon">⚡</div>
+                    <h3>Persistent Kernels</h3>
+                    <p>Reduce launch overhead for variable-length requests. Perfect for agentic workflows with temporal gaps and bursty patterns.</p>
+                </div>
+                <div class="tech-card">
+                    <div class="tech-icon">🔗</div>
+                    <h3>KV Cache Transfer</h3>
+                    <p>Intelligently share KV caches between models through pointer-based sharing and synchronized eviction policies.</p>
+                </div>
+                <div class="tech-card">
+                    <div class="tech-icon">🌊</div>
+                    <h3>Pipeline Optimization</h3>
+                    <p>Stream tokens from generator to verifier in real-time. Enable spec-decoding immediately when prefix cache hits.</p>
+                </div>
+                <div class="tech-card">
+                    <div class="tech-icon">⚖️</div>
+                    <h3>Load-Aware Scheduling</h3>
+                    <p>Dynamically detect and utilize idle models. Balance prefill and decode workloads across your infrastructure.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <h2 class="section-title">Built for Production</h2>
+            
+            <div class="features-list">
+                <div class="feature-item">
+                    <div class="feature-content">
+                        <h3>Multi-Agent Orchestration</h3>
+                        <p>Seamlessly coordinate generator, verifier, and reward model workflows. Optimize for code generation, reasoning chains, and complex iterative tasks.</p>
+                    </div>
+                    <div class="feature-visual">
+                        <div class="visual-box">Generator → Verifier → Reward Model</div>
+                    </div>
+                </div>
+                
+                <div class="feature-item reverse">
+                    <div class="feature-content">
+                        <h3>Adaptive Deployment</h3>
+                        <p>Flexible topology options: same-GPU for maximum cache sharing, multi-GPU for independent execution, or hybrid approaches for optimal performance.</p>
+                    </div>
+                    <div class="feature-visual">
+                        <div class="visual-box">Same GPU / Multi-GPU / Hybrid</div>
+                    </div>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-content">
+                        <h3>Framework Agnostic</h3>
+                        <p>Works with vLLM, TensorRT-LLM, and other leading inference engines. Drop-in optimization without rewriting your stack.</p>
+                    </div>
+                    <div class="feature-visual">
+                        <div class="visual-box">vLLM | TensorRT-LLM | Custom</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Research Section -->
+    <section id="research" class="research">
+        <div class="container">
+            <h2 class="section-title">Research-Backed Innovation</h2>
+            <p class="section-subtitle">Built on cutting-edge research from Carnegie Mellon University's 15-779 Advanced Topics in Computer Systems.</p>
+            
+            <div class="research-highlights">
+                <div class="highlight-card">
+                    <h4>Kernel-Level Optimization</h4>
+                    <p>Persistent kernels and megakernel fusion reduce launch overhead and improve GPU occupancy for agentic workload patterns.</p>
+                </div>
+                <div class="highlight-card">
+                    <h4>Cache Management</h4>
+                    <p>Novel strategies for KV cache sharing, synchronized eviction, and cross-model prefilling in heterogeneous scenarios.</p>
+                </div>
+                <div class="highlight-card">
+                    <h4>Benchmarked Performance</h4>
+                    <p>Validated on Spec-Bench, AgenticSQL, and SWE-Bench with real-world code generation and verification workloads.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Use Cases Section -->
+    <section class="use-cases">
+        <div class="container">
+            <h2 class="section-title">Perfect For</h2>
+            <div class="use-case-grid">
+                <div class="use-case-card">
+                    <div class="use-case-icon">💻</div>
+                    <h3>AI Code Assistants</h3>
+                    <p>Cursor, GitHub Copilot, and other coding tools with generation + verification workflows.</p>
+                </div>
+                <div class="use-case-card">
+                    <div class="use-case-icon">🤖</div>
+                    <h3>Multi-Agent Systems</h3>
+                    <p>Complex workflows with planner, agent, and reviewer collaboration patterns.</p>
+                </div>
+                <div class="use-case-card">
+                    <div class="use-case-icon">🔍</div>
+                    <h3>Reasoning Engines</h3>
+                    <p>Applications requiring iterative refinement, verification, and reward modeling.</p>
+                </div>
+                <div class="use-case-card">
+                    <div class="use-case-icon">☁️</div>
+                    <h3>Cloud Providers</h3>
+                    <p>Maximize GPU utilization and reduce serving costs for agentic AI workloads.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="contact" class="cta-section">
+        <div class="container">
+            <h2>Ready to Optimize Your AI Infrastructure?</h2>
+            <p>Join our early access program and be among the first to experience next-generation agentic inference.</p>
+            <div class="cta-buttons">
+                <a href="mailto:contact@flexinference.ai" class="btn btn-primary btn-large">Get in Touch</a>
+                <a href="https://github.com/120205690/Agentic-Inference-Server-Optimizations" class="btn btn-secondary btn-large" target="_blank">View Research</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>FlexInference</h3>
+                    <p>Next-generation inference for agentic AI</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Product</h4>
+                        <ul>
+                            <li><a href="#technology">Technology</a></li>
+                            <li><a href="#features">Features</a></li>
+                            <li><a href="#research">Research</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Research</h4>
+                        <ul>
+                            <li><a href="https://github.com/120205690/Agentic-Inference-Server-Optimizations" target="_blank">GitHub</a></li>
+                            <li><a href="#">Publications</a></li>
+                            <li><a href="#">Team</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 FlexInference. Research project from CMU 15-779.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
